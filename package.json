@@ -29,11 +29,11 @@
     "@vue/cli-plugin-vuex": "~4.2.0",
     "@vue/cli-service": "~4.2.0",
     "babel-eslint": "^10.0.3",
+    "chai": "*",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.1.2",
-    "vue-template-compiler": "^2.6.11",
-    "chai": "*",
-    "mocha": "*"
+    "mocha": "*",
+    "vue-template-compiler": "^2.6.11"
   },
   "eslintConfig": {
     "root": true,

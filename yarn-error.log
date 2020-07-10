@@ -1,5 +1,5 @@
 Arguments: 
-  /Users/jessicahorton/.nvm/versions/node/v8.15.1/bin/node /Users/jessicahorton/.nvm/versions/node/v8.15.1/bin/yarn test
+  /Users/jessicahorton/.nvm/versions/node/v8.15.1/bin/node /Users/jessicahorton/.nvm/versions/node/v8.15.1/bin/yarn
 
 PATH: 
   /Users/jessicahorton/.nvm/versions/node/v8.15.1/bin:/Users/jessicahorton/.rbenv/shims:/Users/jessicahorton/bin:/usr/local/bin:/Users/jessicahorton/.rbenv/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/MacGPG2/bin:/Users/jessicahorton/.nvm/versions/node/v8.15.1/bin:/Users/jessicahorton/.rbenv/shims:/Users/jessicahorton/bin:/Users/jessicahorton/.rbenv/bin
@@ -14,13 +14,17 @@ Platform:
   darwin x64
 
 Trace: 
-  SyntaxError: /Users/jessicahorton/Desktop/movie-vuex-practice/package.json: Unexpected token } in JSON at position 221
-      at JSON.parse (<anonymous>)
-      at /Users/jessicahorton/.nvm/versions/node/v8.15.1/lib/node_modules/yarn/lib/cli.js:1625:59
-      at Generator.next (<anonymous>)
-      at step (/Users/jessicahorton/.nvm/versions/node/v8.15.1/lib/node_modules/yarn/lib/cli.js:310:30)
-      at /Users/jessicahorton/.nvm/versions/node/v8.15.1/lib/node_modules/yarn/lib/cli.js:321:13
-      at <anonymous>
+  Error: https://registry.npm.taobao.org/faye-websocket/download/faye-websocket-0.11.4.tgz: Request failed "404 Not Found"
+      at ResponseError.ExtendableBuiltin (/Users/jessicahorton/.nvm/versions/node/v8.15.1/lib/node_modules/yarn/lib/cli.js:696:66)
+      at new ResponseError (/Users/jessicahorton/.nvm/versions/node/v8.15.1/lib/node_modules/yarn/lib/cli.js:802:124)
+      at Request.<anonymous> (/Users/jessicahorton/.nvm/versions/node/v8.15.1/lib/node_modules/yarn/lib/cli.js:67057:16)
+      at emitOne (events.js:116:13)
+      at Request.emit (events.js:211:7)
+      at Request.module.exports.Request.onRequestResponse (/Users/jessicahorton/.nvm/versions/node/v8.15.1/lib/node_modules/yarn/lib/cli.js:141625:10)
+      at emitOne (events.js:116:13)
+      at ClientRequest.emit (events.js:211:7)
+      at HTTPParser.parserOnIncomingClient (_http_client.js:558:21)
+      at HTTPParser.parserOnHeadersComplete (_http_common.js:119:17)
 
 npm manifest: 
   {
@@ -31,11 +35,12 @@ npm manifest:
       "serve": "vue-cli-service serve",
       "build": "vue-cli-service build",
       "lint": "vue-cli-service lint",
-      "test": "mocha",
+      "test": "mocha"
     },
     "dependencies": {
       "bootstrap": "^4.4.1",
       "bootstrap-vue": "^2.9.0",
+      "chai": "^4.2.0",
       "core-js": "^3.6.4",
       "mocha": "^7.1.1",
       "node-sass": "^4.13.1",
@@ -55,7 +60,9 @@ npm manifest:
       "babel-eslint": "^10.0.3",
       "eslint": "^6.7.2",
       "eslint-plugin-vue": "^6.1.2",
-      "vue-template-compiler": "^2.6.11"
+      "vue-template-compiler": "^2.6.11",
+      "chai": "*",
+      "mocha": "*"
     },
     "eslintConfig": {
       "root": true,
@@ -1637,6 +1644,11 @@ Lockfile:
       object-assign "^4.1.1"
       util "0.10.3"
   
+  assertion-error@^1.1.0:
+    version "1.1.0"
+    resolved "https://registry.yarnpkg.com/assertion-error/-/assertion-error-1.1.0.tgz#e60b6b0e8f301bd97e5375215bda406c85118c0b"
+    integrity sha512-jgsaNduz+ndvGyFt3uSuWqvy4lCnIJiovtouQN5JZHOKCS2QuhEdbcQHFhVksz2N2U9hXJo8odG7ETyWlEeuDw==
+  
   assign-symbols@^1.0.0:
     version "1.0.0"
     resolved "https://registry.npm.taobao.org/assign-symbols/download/assign-symbols-1.0.0.tgz#59667f41fadd4f20ccbc2bb96b8d4f7f78ec0367"
@@ -2181,6 +2193,18 @@ Lockfile:
     resolved "https://registry.npm.taobao.org/caseless/download/caseless-0.12.0.tgz#1b681c21ff84033c826543090689420d187151dc"
     integrity sha1-G2gcIf+EAzyCZUMJBolCDRhxUdw=
   
+  chai@^4.2.0:
+    version "4.2.0"
+    resolved "https://registry.yarnpkg.com/chai/-/chai-4.2.0.tgz#760aa72cf20e3795e84b12877ce0e83737aa29e5"
+    integrity sha512-XQU3bhBukrOsQCuwZndwGcCVQHyZi53fQ6Ys1Fym7E4olpIqqZZhhoFJoaKVvV17lWQoXYwgWN2nF5crA8J2jw==
+    dependencies:
+      assertion-error "^1.1.0"
+      check-error "^1.0.2"
+      deep-eql "^3.0.1"
+      get-func-name "^2.0.0"
+      pathval "^1.1.0"
+      type-detect "^4.0.5"
+  
   chalk@^1.1.1, chalk@^1.1.3:
     version "1.1.3"
     resolved "https://registry.npm.taobao.org/chalk/download/chalk-1.1.3.tgz#a8115c55e4a702fe4d150abd3872822a7e09fc98"
@@ -2213,6 +2237,11 @@ Lockfile:
     version "0.7.0"
     resolved "https://registry.npm.taobao.org/chardet/download/chardet-0.7.0.tgz#90094849f0937f2eedc2425d0d28a9e5f0cbad9e"
     integrity sha1-kAlISfCTfy7twkJdDSip5fDLrZ4=
+  
+  check-error@^1.0.2:
+    version "1.0.2"
+    resolved "https://registry.yarnpkg.com/check-error/-/check-error-1.0.2.tgz#574d312edd88bb5dd8912e9286dd6c0aed4aac82"
+    integrity sha1-V00xLt2Iu13YkS6Sht1sCu1KrII=
   
   check-types@^8.0.3:
     version "8.0.3"
@@ -2954,6 +2983,13 @@ Lockfile:
     version "0.2.0"
     resolved "https://registry.npm.taobao.org/decode-uri-component/download/decode-uri-component-0.2.0.tgz#eb3913333458775cb84cd1a1fae062106bb87545"
     integrity sha1-6zkTMzRYd1y4TNGh+uBiEGu4dUU=
+  
+  deep-eql@^3.0.1:
+    version "3.0.1"
+    resolved "https://registry.yarnpkg.com/deep-eql/-/deep-eql-3.0.1.tgz#dfc9404400ad1c8fe023e7da1df1c147c4b444df"
+    integrity sha512-+QeIQyN5ZuO+3Uk5DYh6/1eKO0m0YmJFGNmFHGACpf1ClL1nmlV/p4gNgbl2pJGxgXb4faqo6UE+M5ACEMyVcw==
+    dependencies:
+      type-detect "^4.0.0"
   
   deep-equal@^1.0.1:
     version "1.1.1"
@@ -3711,8 +3747,8 @@ Lockfile:
       websocket-driver ">=0.5.1"
   
   faye-websocket@~0.11.1:
-    version "0.11.3"
-    resolved "https://registry.npm.taobao.org/faye-websocket/download/faye-websocket-0.11.3.tgz#5c0e9a8968e8912c286639fde977a8b209f2508e"
+    version "0.11.4"
+    resolved "https://registry.npm.taobao.org/faye-websocket/download/faye-websocket-0.11.4.tgz#5c0e9a8968e8912c286639fde977a8b209f2508e"
     integrity sha1-XA6aiWjokSwoZjn96XeosgnyUI4=
     dependencies:
       websocket-driver ">=0.5.1"
@@ -4025,6 +4061,11 @@ Lockfile:
     version "2.0.5"
     resolved "https://registry.npm.taobao.org/get-caller-file/download/get-caller-file-2.0.5.tgz#4f94412a82db32f36e3b0b9741f8a97feb031f7e"
     integrity sha1-T5RBKoLbMvNuOwuXQfipf+sDH34=
+  
+  get-func-name@^2.0.0:
+    version "2.0.0"
+    resolved "https://registry.yarnpkg.com/get-func-name/-/get-func-name-2.0.0.tgz#ead774abee72e20409433a066366023dd6887a41"
+    integrity sha1-6td0q+5y4gQJQzoGY2YCPdaIekE=
   
   get-stdin@^4.0.1:
     version "4.0.1"
@@ -6441,6 +6482,11 @@ Lockfile:
     dependencies:
       pify "^3.0.0"
   
+  pathval@^1.1.0:
+    version "1.1.0"
+    resolved "https://registry.yarnpkg.com/pathval/-/pathval-1.1.0.tgz#b942e6d4bde653005ef6b71361def8727d0645e0"
+    integrity sha1-uULm1L3mUwBe9rcTYd74cn0GReA=
+  
   pbkdf2@^3.0.3:
     version "3.0.17"
     resolved "https://registry.npm.taobao.org/pbkdf2/download/pbkdf2-3.0.17.tgz#976c206530617b14ebb32114239f7b09336e93a6"
@@ -8579,6 +8625,11 @@ Lockfile:
     integrity sha1-WITKtRLPHTVeP7eE8wgEsrUg23I=
     dependencies:
       prelude-ls "~1.1.2"
+  
+  type-detect@^4.0.0, type-detect@^4.0.5:
+    version "4.0.8"
+    resolved "https://registry.yarnpkg.com/type-detect/-/type-detect-4.0.8.tgz#7646fb5f18871cfbb7749e69bd39a6388eb7450c"
+    integrity sha512-0fr/mIH1dlO+x7TlcMy+bIDqKPsw/70tVyeHW787goQjhmqaZe10uwLujubK9q9Lg6Fiho1KUKDYz0Z7k7g5/g==
   
   type-fest@^0.11.0:
     version "0.11.0"
