@@ -23,7 +23,7 @@
                             :to="{name: 'purchasing', params: {movie: movie}}"
                             router-tag="button"
                             class="btn btn-info"
-                        >Buy Now
+                        >Available Now
                         </b-link>
                         <b-link
                             v-else
