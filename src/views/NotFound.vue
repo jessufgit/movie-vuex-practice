@@ -1,6 +1,6 @@
 <template>
     <div>
-        Sorry, something is wrong!
+        Sorry, something is very - very wrong!
         <router-link :to="{ name: 'home' }">Go Back</router-link>
     </div>
 </template>

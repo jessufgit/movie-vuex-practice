@@ -31,7 +31,7 @@
                             cursor: pointer
                             class="btn btn-warning"
                         >
-                        Sold Out
+                        No Tickets Available
                         </b-link>
                     </b-row>
                     <b-row>
